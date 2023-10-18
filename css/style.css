@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tilt Neon', sans-serif;
+    text-decoration: none;
+    color: #ccc;
+    text-transform: capitalize;
+}
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #000000db;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 100px;
+    margin-bottom: 30px;
+}
+#navbar{
+    width: 100%;
+    padding: 14px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #cccccc24;
+    border-radius: 50px;
+}
+#left-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+}
+#left-nav img{
+    width: 24px;
+}
+
+#mid-nav ul{
+    list-style: none;
+    display: flex;
+}
+#mid-nav ul li{
+    padding: 10px;
+    font-size: large;
+    cursor: pointer;
+}
+#mid-nav ul li:hover{
+    color: #c24cc2;
+}
+#location-icon{
+    font-size: 18px;
+}
+#useCurrentLocation{
+    outline: 0;
+    border: 0;
+    padding: 10px 20px;
+    font-size: medium;
+    color: #ccc;
+    border-radius: 50px;
+    background-color: purple;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+#useCurrentLocation:hover{
+    background-color: #cccccc24;
+}
+
+/* End Header */
+#searchbar, #weatherForm{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+#searchbar input[type=text]{
+    width: 45%;
+    outline: 0; 
+    border: 1px solid #cccccc3d;
+    border-right: none;
+    padding: 14px;
+    font-size: large;
+    background-color: #cccccc24;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+#searchbar input[type=submit]{
+    width: 12%;
+    outline: 0; 
+    border: 1px solid #cccccc3d;
+    padding: 14px;
+    font-size: large;
+    background-color: #cccccc24;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+
+#container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#left-container,  #right-container{
+    width: 40%;
+    padding: 20px;
+}
+
+#mid-container{
+    width: 60%;
+    padding: 20px;
+    background-color: #cccccc24;
+    border: 1px solid #cccccc3d;
+    border-radius: 5px;
+}
+#mid-container p{
+    font-size: large;
+}
+#mid-box-content{
+    font-size: large;
+}
+#left-box, #right-box{
+    width: 100%;
+    padding: 20px;
+    background-color: #cccccc24;
+    border: 1px solid #cccccc3d;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+#content>p{
+    font-size: large;
+}
+#icon{
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    margin: 10px 0;
+    cursor: pointer;
+    background-color: #cccccc24;
+}
+#icon:hover{
+    background-color: purple;
+}
+
+#mid-box{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+    font-size: large;
+    padding: 10px 0;
+}
+#mid-box2-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#mid-box2{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    text-align: center;
+}
+
+
+@media (max-width:992px) {
+        #container{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            padding: 20px;
+        }
+        .box2 {
+            order: -1;
+          }
+          #left-container,  #right-container{
+            width: 85%;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        #mid-container{
+            width: 70%;
+        }
+        #left-box, #right-box{
+            margin-bottom: 0;
+        }
+        header{
+            padding: 16px 55px;
+        }
+        #searchbar input[type=text]{
+            width: 62%;
+        }
+        #searchbar input[type=submit]{
+            width: 12%;
+        }
+
+}
+
+@media (max-width:768px) {
+    #left-container,  #right-container{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin-top: 20px;
+    }
+    #mid-container{
+        width: 100%;
+    }
+    #mid-nav{
+        display: none;
+    }
+    #searchbar input[type=text]{
+        width: 68%;
+    }
+    #searchbar input[type=submit]{
+        width: 25%;
+    }
+    header{
+        padding: 0px;
+    } 
+    #navbar{
+        padding: 16px;
+        border-radius: 0px;
+    }
+    #useCurrentLocation{
+        padding: 8px 16px;
+        font-size: medium;
+    }
+}

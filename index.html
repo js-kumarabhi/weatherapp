@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/default.png" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+
+    <header>
+        <nav id="navbar">
+            <div id="left-nav">
+                <img src="images/default.png" alt="">
+                <h3>WeatherApp</h3>
+            </div>
+            <div id="mid-nav">
+                <ul>
+                    <li id="mumbai">Mumbai</li>
+                    <li id="hyderabad">Hyderabad</li>
+                    <li id="chennai">Chennai</li>
+                    <li id="kolkata">Kolkata</li>
+                </ul>
+            </div>
+            <div id="right-nav">
+                <button type="button" id="useCurrentLocation"><span id="location-icon" class="material-symbols-outlined">
+                    my_location
+                    </span>Current Location</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- End header -->
+    <div id="searchbar">
+        <form action="" id="weatherForm">
+            <input type="text" name="search" id="cityInput" list="citySuggestions" required
+                placeholder="Search city...">
+            <input type="submit" value="Search" id="searchButton">
+        </form>
+
+         <!-- Define the datalist for city suggestions -->
+    <datalist id="citySuggestions">
+        <option value="Canada, ES"></option>
+        <option value="Dubai, AE"></option>
+        <option value="London, GB"></option>
+        <option value="America, MX"></option>
+
+    </datalist>
+    </div>
+
+
+    <div id="container">
+        <div id="left-container">
+            <div id="left-box">
+                <span id="icon" class="material-symbols-outlined">
+                    wb_twilight
+                </span>
+                <div id="content">
+                    <p>Sunrise : <span id="sunriseTime"></span></p>
+                    <p>Sunset : <span id="sunsetTime"></span></p>
+                </div>
+            </div>
+            <div id="left-box">
+                <span id="icon" class="material-symbols-outlined">
+                    captive_portal
+                </span>
+                <div id="content">
+                    <p>Longitude : <span id="longitude"></span></p>
+                    <p>Latitude : <span id="latitude"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="mid-container" class="box2">
+            <p id="dateAndTime"></p>
+            <div id="mid-box">
+                <div id="mid-box-content">
+                    <img id="weatherIcon" alt="weather-icon" style="width: 80px;">
+                </div>
+                <div id="mid-box-content">
+                    <p id="weatherDescription"></p>
+                    <h1 id="temperature"></h1>
+                    <h2 id="locationName"></h2>
+                    <p id="countryCode"></p>
+                </div>
+            </div>
+            <div id="mid-box2">
+                <div id="mid-box2-content">
+                    <span id="icon" class="material-symbols-outlined">
+                        dew_point
+                    </span>
+                    <p>Real Feels : <span id="realFeelsTemperature"></span></p>
+                </div>
+                <div id="mid-box2-content">
+                    <span id="icon" class="material-symbols-outlined">
+                        humidity_low
+                    </span>
+                    <p>Humidity : <span id="humidityPercentage"></span></p>
+                </div>
+                <div id="mid-box2-content">
+                    <span id="icon" class="material-symbols-outlined">
+                        readiness_score
+                    </span>
+                    <p>Pressure : <span id="pressureValue"></span></p>
+                </div>
+            </div>
+        </div>
+
+        <div id="right-container">
+            <div id="right-box">
+                <span id="icon" class="material-symbols-outlined">
+                    airwave
+                </span>
+                <div>
+                    <p>Wind Speed : <span id="windSpeed"></span></p>
+                    <p>Wind Temperature : <span id="windTemperature"></span></p>
+                </div>
+            </div>
+            <div id="right-box">
+                <span id="icon" class="material-symbols-outlined">
+                    thermostat
+                </span>
+                <div id="content">
+                    <p>Max Temperature : <span id="maxTemperature"></span></p>
+                    <p>Min Temperature : <span id="minTemperature"></span></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="javascript/main.js"></script>
+</body>
+
+</html>
