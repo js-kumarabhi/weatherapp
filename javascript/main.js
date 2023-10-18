@@ -5,8 +5,8 @@ document.getElementById('useCurrentLocation').addEventListener('click', function
       const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
       
-      // Fetch weather data for the current location
-      fetchWeatherByCoordinates(latitude, longitude);
+      // Fetch weather data for the current location using the getWeather function
+      getWeather(''); // You might pass an empty string here or adapt as needed
     }, function (error) {
       console.error('Error getting current location:', error);
     });
@@ -14,6 +14,9 @@ document.getElementById('useCurrentLocation').addEventListener('click', function
     alert('Geolocation is not supported by your browser.');
   }
 });
+
+// The rest of your code for getWeather, event listeners, and initial call to getWeather remains unchanged.
+
 
 
 // Function to fetch weather data 
